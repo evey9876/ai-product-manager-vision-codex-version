@@ -6,6 +6,7 @@ import { ControlBar } from "@/app/demo/components/ControlBar";
 import { demoScenes } from "@/app/demo/data/scenes";
 import { ArtefactScene } from "@/app/demo/scenes/ArtefactScene";
 import { HypothesisScene } from "@/app/demo/scenes/HypothesisScene";
+import { ImpactScene } from "@/app/demo/scenes/ImpactScene";
 import { MorningBriefScene } from "@/app/demo/scenes/MorningBriefScene";
 import { SignalScene } from "@/app/demo/scenes/SignalScene";
 import { SimulationScene } from "@/app/demo/scenes/SimulationScene";
@@ -18,6 +19,7 @@ const sceneComponents = [
   HypothesisScene,
   SimulationScene,
   ArtefactScene,
+  ImpactScene,
 ];
 
 export default function DemoController() {
@@ -41,18 +43,18 @@ export default function DemoController() {
           <div className="mt-5 grid gap-6 xl:grid-cols-[1.3fr_0.8fr]">
             <div>
               <h1 className="text-4xl font-semibold tracking-tight text-white lg:text-6xl">
-                A future AI-native day in the life of a product manager.
+                A cinematic demo of AI-native product decision making.
               </h1>
-              <p className="mt-4 max-w-3xl text-base leading-7 text-slate-200 lg:text-lg">
-                This demo is a storytelling prototype focused on signal orchestration, hypothesis
-                generation, experiment simulation, automated artefact creation, and faster decision
-                cycles.
+              <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-200">
+                Start with documentation metrics. End with stronger outcomes and a faster decision cycle.
               </p>
             </div>
             <div className="rounded-[28px] border border-white/10 bg-slate-950/45 p-5">
               <p className="text-xs uppercase tracking-[0.3em] text-slate-500">{scene.eyebrow}</p>
               <p className="mt-3 text-2xl font-medium text-white">{scene.label}</p>
-              <p className="mt-3 text-sm leading-6 text-slate-300">{scene.summary}</p>
+              <p className="mt-3 text-sm leading-6 text-slate-300">{scene.insight}</p>
+              <p className="mt-4 text-xs uppercase tracking-[0.25em] text-cyan-200/80">Action</p>
+              <p className="mt-2 text-sm leading-6 text-white">{scene.action}</p>
             </div>
           </div>
         </header>
@@ -62,6 +64,7 @@ export default function DemoController() {
           total={sceneComponents.length}
           canGoPrevious={sceneIndex > 0}
           canGoNext={sceneIndex < sceneComponents.length - 1}
+          currentLabel={scene.label}
           onPrevious={previousScene}
           onNext={nextScene}
         />

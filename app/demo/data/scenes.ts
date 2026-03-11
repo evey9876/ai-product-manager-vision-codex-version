@@ -2,8 +2,8 @@ export type DemoSceneDefinition = {
   id: string;
   label: string;
   eyebrow: string;
-  title: string;
-  summary: string;
+  insight: string;
+  action: string;
 };
 
 export const demoScenes: DemoSceneDefinition[] = [
@@ -11,48 +11,49 @@ export const demoScenes: DemoSceneDefinition[] = [
     id: "start",
     label: "Start",
     eyebrow: "Entry Point",
-    title: "The PM lands inside an AI-native control room",
-    summary:
-      "This experience skips the marketing layer and drops the user directly into a future operating environment for product decision-making.",
+    insight: "This is a live product vision, not a homepage.",
+    action: "Enter the operating loop.",
   },
   {
-    id: "morning-brief",
-    label: "Morning Brief",
+    id: "dashboard",
+    label: "Dashboard",
     eyebrow: "08:05",
-    title: "A morning brief assembles overnight product movement",
-    summary:
-      "Signal clusters, customer friction, and market shifts are pre-synthesized before the PM opens individual tools.",
+    insight: "Documentation performance is visible in one executive view.",
+    action: "Open the highest-cost documentation issue.",
   },
   {
     id: "signal",
     label: "Signal",
     eyebrow: "08:30",
-    title: "Signals are orchestrated into one ranked decision surface",
-    summary:
-      "Product telemetry, support transcripts, revenue exposure, and competitor movement are condensed into one response-ready layer.",
+    insight: "Signals collapse into one ranked problem statement.",
+    action: "Commit to the top opportunity.",
   },
   {
     id: "hypothesis",
     label: "Hypothesis",
     eyebrow: "09:20",
-    title: "AI proposes hypotheses with traceable evidence",
-    summary:
-      "Instead of manually stitching fragments together, the PM reviews candidate explanations with confidence scores and unknowns.",
+    insight: "AI generates the likely cause and the test path.",
+    action: "Select the highest-confidence hypothesis.",
   },
   {
     id: "simulation",
     label: "Simulation",
     eyebrow: "11:10",
-    title: "Experiments are pressure-tested before execution begins",
-    summary:
-      "Scenario models estimate likely impact, implementation cost, and segment-specific tradeoffs before engineering work is pulled in.",
+    insight: "The team chooses a path before spending delivery time.",
+    action: "Approve the fastest credible experiment.",
   },
   {
     id: "artefact",
     label: "Artefact",
     eyebrow: "14:40",
-    title: "Decision artefacts are generated from the reasoning trail",
-    summary:
-      "The chosen direction becomes a PRD, a stakeholder brief, and an execution packet with minimal manual translation work.",
+    insight: "One decision generates every execution artefact.",
+    action: "Ship the pack to design, engineering, and leadership.",
+  },
+  {
+    id: "impact",
+    label: "Impact",
+    eyebrow: "End State",
+    insight: "Better documentation decisions lift the core funnel fast.",
+    action: "Scale the operating model across more PM workflows.",
   },
 ];

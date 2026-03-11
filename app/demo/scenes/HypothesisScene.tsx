@@ -1,35 +1,33 @@
 import { SceneShell } from "@/app/demo/components/SceneShell";
+import { SignalCard } from "@/app/demo/components/SignalCard";
 
 export function HypothesisScene() {
   return (
     <SceneShell
       eyebrow="Hypothesis Scene"
-      title="Candidate explanations arrive with confidence and traceability"
-      summary="The PM reviews structured reasoning, unknowns, and suggested tests instead of manually building the first draft of insight."
+      title="AI proposes the fix path and the proof plan."
+      synthesis="The model ranks the likely cause and attaches the test to run next."
+      nextAction="Approve the top hypothesis and generate a test script."
     >
-      <div className="space-y-4">
-        {[
-          {
-            title: "Permissions language mismatch",
-            confidence: "0.78 confidence",
-          },
-          {
-            title: "Invite flow is too complex for multi-admin setups",
-            confidence: "0.64 confidence",
-          },
-          {
-            title: "Competitive expectation shift raised setup standards",
-            confidence: "0.47 confidence",
-          },
-        ].map((item) => (
-          <div key={item.title} className="flex flex-col gap-3 rounded-3xl border border-white/10 bg-white/5 p-5 md:flex-row md:items-center md:justify-between">
-            <div>
-              <p className="text-lg text-white">{item.title}</p>
-              <p className="mt-1 text-sm text-slate-400">Linked to evidence from support, activation telemetry, and account structure.</p>
-            </div>
-            <span className="rounded-full bg-cyan-300/15 px-3 py-1 text-sm text-cyan-100">{item.confidence}</span>
-          </div>
-        ))}
+      <div className="grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="space-y-4">
+          <SignalCard
+            title="Top hypothesis"
+            detail="Permissions terminology in the docs does not match the product UI."
+            emphasis="0.78 confidence"
+          />
+          <SignalCard
+            title="AI-generated test script"
+            detail="Serve a rewritten setup guide to new admins and measure completion, search reformulation, and ticket volume."
+            emphasis="Ready to run"
+          />
+        </div>
+        <div className="rounded-[28px] border border-white/10 bg-slate-950/50 p-6">
+          <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Why this wins</p>
+          <p className="mt-4 text-2xl font-medium leading-9 text-white">
+            The PM reviews a recommendation, not a blank page.
+          </p>
+        </div>
       </div>
     </SceneShell>
   );

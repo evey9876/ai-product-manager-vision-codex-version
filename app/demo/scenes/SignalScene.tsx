@@ -1,32 +1,36 @@
 import { SceneShell } from "@/app/demo/components/SceneShell";
+import { SignalCard } from "@/app/demo/components/SignalCard";
 
 export function SignalScene() {
   return (
     <SceneShell
       eyebrow="Signal Scene"
-      title="Disparate inputs collapse into one orchestrated signal layer"
-      summary="AI-native tooling does the aggregation and ranking work first, allowing the PM to spend time on judgment rather than mechanical synthesis."
+      title="AI collapses noisy evidence into one clear problem."
+      synthesis="Search failures, onboarding friction, and support load point to the same documentation breakdown."
+      nextAction="Prioritize documentation setup guidance as the lead problem."
     >
       <div className="grid gap-4 xl:grid-cols-[1.1fr_0.9fr]">
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
-          <p className="text-xs uppercase tracking-[0.25em] text-slate-500">Orchestrated Inputs</p>
-          <div className="mt-4 grid gap-3">
-            {[
-              "Telemetry anomalies",
-              "Support transcript themes",
-              "GTM and revenue exposure",
-              "Competitor movement",
-            ].map((item) => (
-              <div key={item} className="rounded-2xl border border-white/8 bg-slate-950/50 p-4 text-sm text-slate-200">
-                {item}
-              </div>
-            ))}
-          </div>
+        <div className="grid gap-4">
+          <SignalCard
+            title="Support transcripts"
+            detail="Users ask the same permissions question before completing setup."
+            emphasis="Repeated signal"
+          />
+          <SignalCard
+            title="Search behavior"
+            detail="Most failed searches include setup, roles, and access language."
+            emphasis="High intent"
+          />
+          <SignalCard
+            title="Onboarding telemetry"
+            detail="Completion drops sharply after the documentation handoff step."
+            emphasis="Highest funnel loss"
+          />
         </div>
-        <div className="rounded-3xl border border-white/10 bg-slate-950/50 p-5">
-          <p className="text-xs uppercase tracking-[0.25em] text-slate-500">Result</p>
-          <p className="mt-4 text-xl leading-8 text-white">
-            A ranked problem brief with linked evidence, impact bands, and recommended follow-up questions.
+        <div className="rounded-[28px] border border-cyan-300/20 bg-cyan-400/8 p-6">
+          <p className="text-xs uppercase tracking-[0.3em] text-cyan-100/70">Synthesis</p>
+          <p className="mt-4 text-2xl font-medium leading-9 text-white">
+            The issue is not product capability. It is documentation clarity at the setup moment.
           </p>
         </div>
       </div>
