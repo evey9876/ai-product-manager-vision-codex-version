@@ -52,7 +52,7 @@ export const demoScenes: DemoSceneDefinition[] = [
   {
     id: "impact",
     label: "Impact",
-    eyebrow: "Release Readout",
+    eyebrow: "15:20",
     insight: "Documentation changes improve metrics and release confidence.",
     action: "Roll the operating model into the next launch cycle.",
   },
