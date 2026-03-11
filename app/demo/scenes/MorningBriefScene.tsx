@@ -4,20 +4,15 @@ import { SceneShell } from "@/app/demo/components/SceneShell";
 export function MorningBriefScene() {
   return (
     <SceneShell
-      eyebrow="Metrics Dashboard"
-      title="Documentation health is visible in one glance."
-      synthesis="Three numbers explain the business problem before anyone opens a doc."
-      nextAction="Investigate the onboarding drop linked to documentation."
+      eyebrow="Morning Signal"
+      title="Three overnight signals raise release risk."
+      synthesis="The PM does not start with dashboards. They start with the signals that matter."
+      nextAction="Open the metrics behind the spike."
     >
       <div className="grid gap-4 lg:grid-cols-3">
-        <MetricCard label="Search success rate" value="61%" delta="-12 pts WoW" tone="warning" />
-        <MetricCard label="Onboarding completion" value="68%" delta="-9 pts for new admins" tone="warning" />
-        <MetricCard
-          label="Doc-related support tickets"
-          value="143"
-          delta="+31 this week"
-          tone="warning"
-        />
+        <MetricCard label="Onboarding risk" value="High" delta="Completion dropped overnight" tone="warning" />
+        <MetricCard label="UAT issue" value="Open" delta="Release checklist blocked" tone="warning" />
+        <MetricCard label="Support spike" value="+31" delta="Documentation-related tickets" tone="warning" />
       </div>
     </SceneShell>
   );

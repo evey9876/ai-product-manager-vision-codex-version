@@ -5,37 +5,37 @@ import { SignalCard } from "@/app/demo/components/SignalCard";
 export function ArtefactScene() {
   return (
     <SceneShell
-      eyebrow="Artefact Scene"
-      title="One decision generates the execution pack."
-      synthesis="AI creates the PRD, the experiment scripts, and the stakeholder update from the same source of truth."
-      nextAction="Send the pack and start measurement."
+      eyebrow="AI-Generated Artefacts"
+      title="The release pack is generated from the chosen intervention."
+      synthesis="The PM moves directly from decision to execution."
+      nextAction="Send the pack and track launch confidence."
     >
       <div className="grid gap-4 xl:grid-cols-[1.1fr_0.9fr]">
         <div className="grid gap-4 md:grid-cols-2">
           <SignalCard
             title="AI-generated PRD"
-            detail="Problem, audience, success metrics, and rollout plan drafted instantly."
+            detail="Scope, release risk, success metrics, and rollout notes drafted instantly."
             emphasis="Ready for review"
           />
           <SignalCard
-            title="AI-generated experiment script"
-            detail="Test cases, traffic split, and measurement plan generated automatically."
+            title="AI-generated test script"
+            detail="UAT steps, acceptance checks, and measurement plan generated automatically."
             emphasis="Ready for launch"
           />
           <SignalCard
-            title="Stakeholder update generation"
-            detail="Leadership summary written for speed, risk, and projected impact."
+            title="Stakeholder update"
+            detail="A concise release note for engineering, support, and leadership."
             emphasis="Narration-ready"
           />
           <SignalCard
             title="Documentation experience metrics"
-            detail="Search success, onboarding completion, and support tickets tied to the change."
+            detail="Search success, onboarding completion, support tickets, and release confidence tied to launch."
             emphasis="Live measurement"
           />
         </div>
         <div className="grid gap-4">
           <MetricCard label="PRD draft time" value="5 min" delta="Previously 2 hours" tone="positive" />
-          <MetricCard label="Decision-to-brief cycle" value="Same day" delta="Previously multi-day" tone="positive" />
+          <MetricCard label="Release brief cycle" value="Same day" delta="Previously multi-day" tone="positive" />
         </div>
       </div>
     </SceneShell>
